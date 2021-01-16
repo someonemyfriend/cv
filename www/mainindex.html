@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+</head>
+<body>
+    <div class="cursor"></div>
+    <header>
+        <div class="classic-menu">
+            <div class="logo"><span>vasilia</span>staykova</div>
+            <nav>
+                <div class="hamburger">
+                    <div class="line"></div>
+                    <div class="line"></div>
+                    <div class="line"></div>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <section>
+            <div class="your-class">
+                <div class="firstHover" onmouseover="changeImg(this)" onmouseout="normalImg(this)">Quiz Game</div>
+                <div onmouseover="changeSecondImg(this)" onmouseout="normalImgSecond(this)">Template</div>
+                <div class="firstHover" onmouseover="third(this)" onmouseout="outThird(this)">Web Design</div>
+                <div class="firstHover" onmouseover="forth(this)" onmouseout="outForth(this)">Weather App</div>
+            </div>
+            <div class="container">
+                <div class="bg-img">
+                    <img id="containerImg" class="containerImg" src="assets/img/quiz-screen.png"  alt="" srcset=""> 
+                    <img id="template" class="containerImg" src="assets/img/quiz-screen2.png"  alt="" srcset="">  
+                    <img id="templateThird" class="containerImg" src="assets/img/quiz-screen3.png" alt="" srcset="">
+                    <img id="templateForth" class="containerImg" src="assets/img/quiz-screen4.png" alt="" srcset="">
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <input type="submit" onclick="openPDF()" value="get this">
+    </footer>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+
+<script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+<script src="assets/js/main.js"></script>
+    
+</body>
+</html>
