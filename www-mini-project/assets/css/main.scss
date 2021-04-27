@@ -1,0 +1,243 @@
+ // fonts
+  @import url('https://fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&display=swap&subset=devanagari,latin-ext');
+
+ 
+ // variables
+$font-staack:   'Poppins', sans-serif;
+$primary-color: #353333;
+
+html {
+    scroll-behavior: smooth;
+  }
+
+body {
+    background-color: rgb(29, 28, 28);
+    margin: 0;
+    height: 100vh;
+    font-family: $font-staack;
+}
+
+
+// cursor animation
+.cursor {
+    z-index: 1;
+    position: fixed;
+    pointer-events: none;
+    width: 20px;
+    height: 20px;
+    border: 1px solid white;
+    border-radius: 50%;
+    position: absolute;
+    transition-duration: 200ms;
+    transition-timing-function: ease-out;
+    animation: cursorAnim .5s infinite alternate;
+}
+
+.cursor::after {
+    content: "";
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    border: 8px solid rgb(82, 80, 80);
+    border-radius: 50%;
+    opacity: .5;
+    top: -8px;
+    left: -8px;
+    animation: cursorAnim2 .5s infinite alternate;
+}
+
+@keyframes cursorAnim {
+    from {
+        transform: scale(1);
+    }
+    to {
+        transform: scale(.7);
+    }
+}
+
+@keyframes cursorAnim2 {
+    from {
+        transform: scale(1);
+    }
+    to {
+        transform: scale(.4);
+    }
+}
+
+@keyframes cursorAnim3 {
+    0% {
+        transform: scale(.5);
+    }
+    50% {
+        transform: scale(1.5);
+    }
+    100% {
+        transform: scale(.3);
+        opacity: 0px;
+    }
+}
+
+.expand {
+    animation: cursorAnim3 .5s forwards;
+    border: 1px solid rgb(12, 11, 11);
+}
+// -END- of cursor animation
+
+// Navbar style
+.classic-menu {
+    display: flex;
+    .logo {
+        color: white;
+        font-weight: 700;
+        span {
+            font-weight: 100;
+        }
+    }
+     
+    nav {
+        height: 10vh;
+        width: 100%;
+    }
+
+    .nav-links {
+        display: flex;
+        list-style: none;
+        width: 50%;
+        height: 100%;
+        justify-content: space-around;
+        align-items: center;
+        margin-left: auto;
+        
+        li {
+            a {
+                color: white;
+                text-decoration: none;
+                font-size: 16px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .classic-menu {
+        .logo {
+            position: fixed;
+            z-index: 9;
+        }
+        nav {
+            position: relative;
+            .hamburger {
+                z-index: 9;
+                position: absolute;
+                cursor: pointer;
+                right: 5%;
+                top: 50%;
+                transform: translate(-5%, -50%);
+                .line {
+                    width: 30px;
+                    height: 1px;
+                    background: white;
+                    margin: 8px;
+                }
+            }
+            .nav-links {
+                padding: 0;
+                margin: 0;
+                z-index: 1;
+                position: fixed;
+                background:  hsla(0, 1%, 27%, 0.86);
+                height: 100vh;
+                width: 100%;
+                flex-direction: column;
+                display: none;
+                
+            }
+            .open {
+                display: flex;
+                height: 100vh;
+                width: 100%;
+            }
+        }
+        
+    }
+    
+}
+//-END- of Navbar style
+
+h1 {
+    font-style: $font-staack;
+    color: rgb(105, 102, 102);
+}
+
+::-webkit-scrollbar {
+     display: none;
+}
+
+// -START-slick
+
+.slick-initialized .slick-slide {
+    //height: 80vh;
+}
+
+.your-class {
+    font-size: 3em;
+    color: rgba(255, 255, 255, 0);
+    font-weight: 900;
+    text-align: center;
+    -webkit-text-fill-color: rgba(255, 255, 255, 0); /* Will override color (regardless of order) */
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: rgb(202, 29, 29);
+    div {
+       box-sizing: border-box;
+
+    }
+    .firstHover {
+        &:hover {
+            -webkit-text-fill-color: rgb(230, 212, 212);
+            -webkit-text-stroke-width: 1px;
+            -webkit-text-stroke-color: #979090;
+        }
+    }
+}
+
+.slick-slide {
+    padding: 1em;
+    align-items: center;
+}
+
+.container {
+    
+    .bg-img {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }    
+}
+
+.containerImg {
+    max-width: 100%;
+    height: auto;
+    visibility: hidden;
+}
+
+.something {
+    visibility: hidden;
+}
+
+.mystyle {
+    z-index: -2;
+    visibility: visible;
+    position: absolute;
+    top: 10%;
+    max-width: 75%;
+}
+
+.secondStyle {
+    z-index: -2;
+    visibility: visible;
+    position: absolute;
+    top: 10%;
+    max-width: 75%;
+}
+
+// -END-slick
